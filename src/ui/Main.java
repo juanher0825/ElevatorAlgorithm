@@ -7,8 +7,19 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+/* This class is corresponding to Main Application
+ * @Author: Juan Hernandez
+  	@Version: 1.0
+ */
+
 public class Main {
 
+	/* This is the main method of the main
+	 * Here you can find an array of N-integers that are refer to the floors 
+	 * Also can find a Hashmap that have mapping to new floors where the elevator should go
+	 * In this class we will find the call of the method with the algorithm of elevator
+	 */
+	
 	public static void main(String[] args) {
 		System.out.println("Elevator Algorithm");
 		
@@ -22,6 +33,16 @@ public class Main {
 		
 		elevatorA(a, 4, map);
 	}
+	
+	/*This is the method that have the algorithm to do work the elevator
+	 * @param: Integer floors[], int IFloor, Map<Integer, Integer>
+	 * 		- Integer floors[] - An array with the all floors that the elevator should go
+	 * 		- int IFloor - An initial floor when the elevator start
+	 * 		- Map<Integer, Integer> - An mapping of new floors that should put during the program running
+	 * 
+	 * @return: void
+	 * 		- Return the positions of elevator, also when up and down or stop.
+	 */
 	
 	
 	public static void elevatorA(Integer floors[], int IFloor, Map<Integer, Integer> map) {
@@ -256,8 +277,6 @@ public class Main {
 						//Convert the arraylist back to an array
 						newArr = new Integer[lista.size()];
 						floors = lista.toArray(newArr);
-				        //arr = new String[ testList.size() ];
-				        //testList.toArray(arr);
 						System.out.println("---Piso agregado: " + map.get(IFloor) + Arrays.toString(floors));
 					}
 				
